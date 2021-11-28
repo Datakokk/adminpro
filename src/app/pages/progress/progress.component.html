@@ -7,16 +7,16 @@
                 <div class="progress m-t-20">
                     <div class="progress-bar bg-primary progress-bar-striped active" 
                          style="height:5px;" 
-                         [style.width]="getPercentage()"
                          role="progressbar">
-                    </div>
+                        </div>
+                        <!-- [style.width]="getPercentage()" -->
                 </div>
                 <div class="progress m-t-20">
                     <div class="progress-bar bg-info progress-bar-striped active" 
                          style="height:5px;" 
-                         [style.width]="getPercentage()"
                          role="progressbar">
-                    </div>
+                        </div>
+                        <!-- [style.width]="getPercentage()" -->
                 </div>
             </div>
         </div>
@@ -26,34 +26,18 @@
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                <div class="input-group">
-                    <span class="input-group-btn">
-                        <button class="btn btn-primary" 
-                                (click)="changeValue(-5)"
-                                type="button">
-                            <i class="fa fa-minus"></i>
-                        </button>
-                    </span>
-                    <input 
-                        type="number" 
-                        class="form-control" 
-                        placeholder="Progress"
-                        [(ngModel)]="progress">
-                    <span class="input-group-btn">
-                        <button class="btn btn-primary" 
-                                (click)="changeValue(5)"
-                                type="button">
-                            <i class="fa fa-plus"></i>
-                        </button>
-                    </span>
-                </div>
+                
+                <app-increasing></app-increasing>
+
             </div>
         </div>
     </div>
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                2
+               
+                <app-increasing></app-increasing>
+
             </div>
         </div>
     </div>
