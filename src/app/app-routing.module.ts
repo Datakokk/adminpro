@@ -3,13 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 //Modules
 import { PagesRoutingModule } from './pages/pages.routing';
-
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
-import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { AuthRoutingModule } from './auth/auth.routing';
 
+import { NopagefoundComponent } from './nopagefound/nopagefound.component';
+
 const routes: Routes = [
+  // path: '/dashboard' PagesRoutingModule
+  // path: '/auth' AuthRoutingModule
+  
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: '**', component: NopagefoundComponent},
 ]
 
