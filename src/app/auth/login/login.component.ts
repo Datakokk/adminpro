@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
 
   login(){
     console.log("submiteado");
-    this.router.navigate(['/'])
+    //this.router.navigate(['/'])
+    this.router.navigateByUrl('/');
   } 
 }
