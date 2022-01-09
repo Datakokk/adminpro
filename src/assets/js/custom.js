@@ -80,23 +80,23 @@ const customInitFunctions = () => {
             $(this).parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
         }).trigger('blur');
 
-        // ============================================================== 
-        // Auto select left navbar
-        // ============================================================== 
-        $(function () {
-            var url = window.location;
-            var element = $('ul#sidebarnav a').filter(function () {
-                return this.href == url;
-            }).addClass('active').parent().addClass('active');
-            while (true) {
-                if (element.is('li')) {
-                    element = element.parent().addClass('in').parent().addClass('active');
-                } else {
-                    break;
-                }
-            }
-
-        });
+        // // ============================================================== // Comment because we don't need this behaviour, we want to use routerLinkActive
+        // // Auto select left navbar// Comment because we don't need this behaviour, we want to use routerLinkActive
+        // // ============================================================== // Comment because we don't need this behaviour, we want to use routerLinkActive
+        // $(function () {// Comment because we don't need this behaviour, we want to use routerLinkActive
+        //     var url = window.location;// Comment because we don't need this behaviour, we want to use routerLinkActive
+        //     var element = $('ul#sidebarnav a').filter(function () {// Comment because we don't need this behaviour, we want to use routerLinkActive
+        //         return this.href == url;// Comment because we don't need this behaviour, we want to use routerLinkActive
+        //     }).addClass('active').parent().addClass('active');// Comment because we don't need this behaviour, we want to use routerLinkActive
+        //     while (true) {// Comment because we don't need this behaviour, we want to use routerLinkActive
+        //         if (element.is('li')) {// Comment because we don't need this behaviour, we want to use routerLinkActive
+        //             element = element.parent().addClass('in').parent().addClass('active');// Comment because we don't need this behaviour, we want to use routerLinkActive
+        //         } else {// Comment because we don't need this behaviour, we want to use routerLinkActive
+        //             break;// Comment because we don't need this behaviour, we want to use routerLinkActive
+        //         }// Comment because we don't need this behaviour, we want to use routerLinkActive
+        //     }// Comment because we don't need this behaviour, we want to use routerLinkActive
+// Comment because we don't need this behaviour, we want to use routerLinkActive
+        // });// Comment because we don't need this behaviour, we want to use routerLinkActive
         // ============================================================== 
         //tooltip
         // ============================================================== 
