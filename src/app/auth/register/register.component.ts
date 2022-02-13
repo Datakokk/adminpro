@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControlOptions, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2'
+import { Router } from '@angular/router';
 
 import { UserService } from 'src/app/services/user.service';
 
@@ -14,7 +15,8 @@ export class RegisterComponent {
   public formSubmitted = false;
 
   constructor( private formBuilder: FormBuilder,
-                private userService: UserService) { }
+                private userService: UserService,
+                private router: Router) { }
 
   public registerForm = this.formBuilder.group({
     name:['Nando', [ Validators.required, Validators.minLength(2)] ],
@@ -35,7 +37,7 @@ export class RegisterComponent {
     //make the post
     this.userService.createUser(this.registerForm.value)
         .subscribe({
-          next: x => console.log(x),
+          next: x => { this.router.navigateByUrl('/')},
           error: err => { Swal.fire('Error', err.error.msg, 'error')},
           complete: () => console.log('Observer got a complete notification')
         })
